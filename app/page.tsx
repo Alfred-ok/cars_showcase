@@ -46,6 +46,7 @@ export default function Home() {
   }
 
   useEffect(()=>{
+    console.log(fuel, year, limit, manufacturer, model)
     getCars();
   }, [fuel, year,limit,manufacturer,model])
 
@@ -102,7 +103,7 @@ export default function Home() {
           </div>
         ):(
           <div className="home__error-container">
-            <h2 className="text-black text-xl font-bold">Oops, no results</h2>
+            <h2 className="text-black text-xl font-bold"> Search Input above for result</h2>
             <p>{allCars?.message}</p>
           </div>
         )}
